@@ -1,23 +1,68 @@
 aid: bluestonelane
 name: Bluestonelane
-description: 'Bluestonelane is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
-url: https://raw.githubusercontent.com/api-evangelist/bluestonelane/refs/heads/main/apis.yml
+image: https://bluestonelane.com/wp-content/uploads/2022/02/BL201218306777-1-scaled.jpg
+description: Bluestone Lane is an Australian‑origin coffee brand operating cafés across the United States. It offers ethically‑sourced, meticulously‑roasted
+  coffee beans, a subscription service, wholesale programs, and a loyalty app that rewards frequent customers. The company emphasizes sustainable
+  packaging, community‑centric café experiences, and corporate coffee solutions for businesses. While it runs a robust retail e‑commerce site
+  and provides corporate coffee services, it does not currently expose a public API for external developers. The brand focuses on quality, sustainability,
+  and a distinctive Australian café culture brought to American neighborhoods.
+url: https://bluestonelane.com
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-29 (modular-v1; was harvest)
 specificationVersion: '0.20'
 created: '2026-09-29'
 modified: '2026-09-29'
 tags:
 - Company
-apis: []
+- Coffee
+- Retail
+- Subscription
+- Sustainability
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: LLMsTxt
+  url: llms/bluestonelane-llms.txt
+- type: WellKnown
+  url: well-known/bluestonelane-well-known.yml
+- type: Hosts
+  url: hosts/bluestonelane-hosts.yml
+- type: Vendors
+  url: vendors/bluestonelane-vendors.yml
+- type: TermsOfService
+  url: https://bluestonelane.com/policies/terms-of-use/
+- type: PrivacyPolicy
+  url: https://bluestonelane.com/policies/privacy/
+- type: Newsroom
+  url: https://bluestonelane.com/press/
+- type: Login
+  url: https://shop.bluestonelane.com/account/login
+- type: DomainSecurity
+  url: security/bluestonelane-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/bluestonelane
+  url: https://bluestonelane.com
+- type: Blog
+  url: https://bluestonelane.com/blog/
+- type: About
+  url: https://bluestonelane.com/about/
+- type: Careers
+  url: https://bluestonelane.com/careers/
+- type: Contact
+  url: https://bluestonelane.com/contact/
+apis:
+- name: Bluestonelane GraphQL API
+  description: GraphQL endpoint for Bluestonelane shop.
+  humanURL: https://shop.bluestonelane.com
+  baseURL: https://shop.bluestonelane.com/api
+  aid: bluestonelane:bluestonelane-graphql-api
+x-enrichment:
+  date: '2026-09-29'
+  status: enriched
+  artifacts_added: 9
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local

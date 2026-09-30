@@ -1,0 +1,77 @@
+generated: '2026-09-29'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 4
+  own: 4
+  other_domain: 0
+  platform: 0
+  roles:
+  - api
+  - identity
+  - other
+  - website
+hosts:
+- host: api.bluestonelane.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: bluestonelane.com
+  role: api
+  relation: own
+- host: bluestonelane.com
+  found_by:
+  - pointer
+  - probed
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - TermsOfService
+  - PrivacyPolicy
+  - Newsroom
+  - Website
+  - Blog
+  - About
+  - Careers
+  - Contact
+  serves:
+  - cdn
+  - hosting
+  vendor: cloudflare
+  registrable_domain: bluestonelane.com
+  role: website
+  relation: own
+- host: order.bluestonelane.com
+  found_by:
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: bluestonelane.com
+  role: other
+  relation: own
+- host: shop.bluestonelane.com
+  found_by:
+  - pointer
+  - apis[]
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - Login
+  serves:
+  - api
+  - docs
+  - hosting
+  platform: shopify.com
+  vendor: shopify
+  registrable_domain: bluestonelane.com
+  role: identity
+  relation: own
